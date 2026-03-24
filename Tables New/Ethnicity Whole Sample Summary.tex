@@ -1,0 +1,30 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1.4}
+\small
+\setlength{\tabcolsep}{6pt}
+
+\begin{flushleft}
+\begin{tabular}{@{}p{7.5cm}*{4}{c}@{}}
+\hline\hline
+Variable & Brahmin/Chhetri & Janajati & Dalit & Muslim \\
+\hline
+Post-Earthquake × Earthquake Affected & 0.438\sym{***} & 0.284\sym{*} & 0.417\sym{**} & 0.938\sym{**} \\
+                                      & (0.14) & (0.16) & (0.16) & (0.36) \\
+\hline
+Mother's Characteristics              & YES & YES & YES & YES \\
+Partner's Characteristics             & YES & YES & YES & YES \\
+\hline
+Birth Year FE                         & YES & YES & YES & YES \\
+District FE                           & YES & YES & YES & YES \\
+R-sqr                                 & 0.848 & 0.843 & 0.831 & 0.944 \\
+Observations                          & 641 & 614 & 572 & 162 \\
+\hline\hline
+\end{tabular}
+
+\vspace{4pt}
+\noindent\footnotesize
+Standard Error in parentheses \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)\\
+\textit{Mother’s Characteristics include Average Birth Gap, Mother’s Education, Mother’s Employment, Mother’s Ethnicity, Mother’s Occupation, Mother’s Age, Number of Union and Number of Kid.}\\
+\textit{Partner’s Characteristics include Partner’s Education, Partner’s Occupation, Partner’s Age.}\\
+\textit{Detailed Table is shown in the Appendix.}
+\end{flushleft}

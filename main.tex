@@ -1,0 +1,548 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{xr-hyper}
+\externaldocument{appendix}
+%\usepackage{palatino}
+%\usepackage{simplemargins}
+%\setleftmargin{0.95 in}
+%\setrightmargin{0.95 in}
+%\settopmargin{0.95 in}
+%\setbottommargin{0.95 in}
+\usepackage{geometry}
+\geometry{top=1.75 cm, bottom=1.75cm, left=2.5cm, right=2.5cm}
+\usepackage{setspace}
+\usepackage{comment}
+\usepackage{bibentry}
+\usepackage{adjustbox}
+\usepackage{longtable, tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{leqno}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[mathscr]{euscript}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{todonotes}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\hypersetup{colorlinks}
+\usepackage{color}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor,cancel}
+\usepackage{float}
+\usepackage[markup=underlined]{changes}
+\definechangesauthor[name={Dr. Joan}, color = red]{JH}
+\definechangesauthor[name={Dr. Ghosh}, color = blue]{PG}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+\newcommand{\sym}[1]{\rlap{#1}}
+
+
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkblack}{rgb}{0,0,0.5}
+\hypersetup{ colorlinks ,
+	linkcolor=darkblue,
+	filecolor=darkgreen,
+	urlcolor=darkred,
+	urlcolor=darkblack,
+	citecolor=darkblue }
+
+%\usepackage[abbr]{harvard}
+
+\usepackage[sort]{natbib}
+\usepackage{setspace}
+%\doublespacing
+\onehalfspacing
+
+\begin{document}
+
+\title{The Ripple Effect: Nepal's 2015 Earthquake \\ and Age at First Birth
+}
+% \author{Ramesh Dulal, Pallab K. Ghosh} 
+  \author{Ramesh Dulal \thanks{Corresponding author: Department of Economics. 308 Cate Center Drive, Room 325 Cate 1 (CCD1),University of Oklahoma, Norman OK 73072. Email: ramesh.dulal@ou.edu.} %\qquad and \hspace{0.35 cm} Pallab Ghosh \thanks{Department of Economics, University of Oklahoma}
+        }
+        
+%\author{Preliminary Draft}
+\date{November 2025}
+\maketitle
+\begin{abstract}
+
+\noindent This study examines the impact of Nepal's devastating 2015 earthquake with magnitude 7.8 on women's age at first birth (A1B), contributing to our understanding of how people change their reproductive decision in developing countries like Nepal. With a Difference in Difference design using pooled cross-sectional data from three rounds of Nepal Demographic and Health Surveys (2011, 2016, 2022), we compare the A1B of 14 severely affected districts against 61 unaffected districts before and after the earthquake. Our results show that women in earthquake-affected areas delayed their first birth by approximately 0.4-0.6 years (4.8-7.2 months) compared to women in unaffected districts. These effects persist for at least four years following the disaster. The impact varied significantly across population subgroups: older women, Muslims, and those with less education experienced the most pronounced delays. Mechanism analysis reveals that the earthquake increased the likelihood of mothers working in skilled manual labor by 2 percentage points ($p<0.01$) and this was a key channel linking the earthquake exposure to delay in A1B. 
+
+
+\vspace{0.75 cm}
+	\noindent \emph{Keywords:} Natural disasters, age at first birth, Nepal Earthquake.\vspace{0.25 cm} \\
+	\noindent \emph{JEL Codes:} J13, Q54, O15
+	
+\end{abstract}
+
+\newpage
+\noindent \section{Introduction}
+
+Natural disasters are becoming more frequent globally, with 393 events recorded in 2024, surpassing the 2004-2023 annual average of 371 and this led to approximately \$242 billion in economic losses (CRED, 2025). Prior research has shown economic impacts of such destructions in terms of worsened macro-economic indicators \footnote{Previous literature has highlighted the effect of natural disasters on economic growth \citep{cavallo2013catastrophic, fomby2013growth}, macroeconomic indicators \citep{noy2009macroeconomic, horwich2000economic}, and local labor market outcomes \citep{shakya2022natural, belasen2009disasters, kirchberger2017natural, mcintosh2008measuring}.}, yet disasters may also affect household decision-making and demographic behaviors. This paper focuses on the 2015 Gorkha earthquake in Nepal, which affected approximately 8 million people and caused economic losses equivalent to half the country's GDP \citep{goda20152015}. Nepal Demographic and Health Survey (NDHS) data shows that median age at first birth (A1B) for women aged 25-49 increased from 19.8 years in 1996 to 20.6 years in 2022, with the percentage of women giving birth by age 18 declining from 26\% to 20\%.
+
+\vspace{0.25 cm}
+
+The purpose of this study is to evaluate the impact of the 2015
+earthquake on A1B in Nepal. As mentioned earlier, the 7.8 magnitude earthquake caused severe economic and social disruption, it may have had significant effects on A1B due to the change in the reproductive decisions created by uncertainities and change in labor market outcomes. Prior literature shows that people change their decisions in response to socio-economic circumstances, and such responses would have an impact on various dimensions of human well-being. For instance, \citet{miller2009motherhood} found that delayed motherhood leads to higher test scores among the first born children, and \citet{lopez2003children} concludes that maternal A1B is more predictive of the child outcomes compared to the age at the time of each child's birth. Additionally, \citet{huang2020early} have found that the Chinese parents manipulate the birth timing to gain educational advantage for their children.
+
+\vspace{0.25cm}
+
+Moreover, various literature link fertility decisions with labor market outcomes. For example, \citet{cristia2008effect} investigates the causal impact of bearing a child on female labor supply and finds that childbearing reduces female employment, while, \citet{loughran2009wait} find that marriage and childbearing negatively impact wages particularly for women and further argue that early marriage and parenthood are likely to lower the lifetime earnings and these effects are more concentrated among women. Moreover, \citet{miller2009motherhood} finds that a year delay in the birth of first child results to 9\% increase in the career earning of the women and a 10\% drop in wages when women become mother.     
+However, \citet{neugart2013economic} show that economic incentives to parents can significantly influence the timing of childbirth. In sum, the evidence suggests that the timing of birth and fertility decisions of women are linked with the labor market outcomes. 
+
+\vspace{0.25cm}
+
+Individuals are likely to make fertility related decisions such as A1B in line with their aspired economic outcomes. Women are likely to alter their fertility related decisions like A1B at times of calamities. While the majority of studies investigate the impact of natural disasters on fertility behavior, specifically the number of children and birth spacing \citep{seltzer2017post, nobles2014effects, evans2010fertility, finlay2009fertility} fewer have considered investigating the impact on A1B. 
+\citet{caruso2015long}, for instance, investigate the intergenerational impact of an earthquake in Peru on A1B and found that women from an area affected while in utero became mothers at younger age. Furthermore, \citet{behrman2016effects} investigate the effect of the 2010 Haiti Earthquake on women's reproductive health and report the increased and earlier pregnancies due to the disruption in family planning services. In this paper we investigate the impact of Nepal's 2015 earthquake specifically on A1B.   
+
+\vspace{0.25 cm}
+
+Most of the existing literature in Nepal have investigated the determinants and situation of A1B. For instance, \citet{choe2001early} compared the fertility scenario between Nepal and Indonesia and reported that Nepalese women are more likely to experience early marriage and motherhood compared to women in Indonesia. Moreover, other studies investigate the determinants of A1B. For instance \citet{ghimire2017social} concludes neighbor's experience and local infrastructure as the major determinants of A1B in Nepal. Moreover, \citet{neal2019using} report that 40\% of women gave birth by age 20, 5\% had first birth before they reached 16, and early birth is associated with poorer, less-educated and rural girls. Additionally, \citet{khanal2021determinant} argues that the major determinants of the A1B in Nepal are primarily women’s education, occupation, wealth index and age at marriage, which is positively correlated with A1B. The author recommends that the supply of contraceptives would be effective in delaying the A1B. More recently, \citet{marphatia2024generational} investigate the pattern of A1B in two different generations and find that the later generation had early A1B compared to the older generation due to differences in cohabitation.   
+
+
+\vspace{0.25 cm}
+
+Concurrently, several studies have looked into the impact of the 2015 Nepal earthquake on various social and economic outcomes. These include study of child health and fertility \citep{khatri2020experiences, pun2023impact}, mental health \citep{kane2018mental}, employment and labor migration \citep{shakya2022natural}, education and human capital \citep{raut2022impact}, labor availability and land use \citep{dicarlo2018post}. Even though there is a growing body of work in this area, there is still a noticeable gap in the literature when it comes to understanding how large-scale shocks like the 2015 earthquake may have influenced women’s reproductive behavior, especially the timing of their first birth.
+
+
+
+\vspace{0.25 cm}
+
+We employ a difference-in-differences (DID) research design to assess changes in the A1B between districts that were severely affected by the earthquake (`treated') and those that were not (`control'). The treatment group comprises 14 districts identified by the National Reconstruction Authority (NRA), the government agency responsible for coordinating reconstruction efforts after the April 2015 earthquake in Nepal. The control group includes the remaining 61 districts of Nepal. This classification has also been used in the prior studies, for example \citet{shakya2022natural} have investigated the impact of the 2015 Earthquake on Labor migration.Likewise \citet{pun2023impact} have investigated the impact of earthquake on the height-for-age of children aged 0-5 years in Nepal. To estimate the impact of the 2015 earthquake on A1B, we use pooled cross-sectional data from three rounds of Nepal's Demographic and Health Survey (NDHS) data-2011, 2016 and 2022. Our outcome variable of interest is the A1B of the mother, which is compared across the treated and control districts before and after the earthquake. 
+
+\vspace{0.25 cm}
+
+Furthermore, we investigate into the immediate impact and the longer term impact of the earthquake. To do this we employ difference-in-difference regression models that compare outcomes of as many years as possible. Moreover, we conduct the analyses using district level and birth-year fixed effects. Using a difference-in-differences approach, we estimate that women in earthquake-affected districts gave birth to their first child approximately 0.235 years later—equivalent to about 2.8 months of delay—compared to women in unaffected districts after 2015. This effect remains robust across multiple model specifications that include controls for women’s education, wealth status, and survey year. The findings suggest that large-scale disasters can meaningfully alter fertility timing, possibly due to increased uncertainty, economic disruption, or delayed access to marriage and reproductive health services. 
+
+\vspace{0.25cm}
+
+The parallel time trends of treatment and control group relate to the central question of a potential endogeneity of the treatment \citep{Bassily_et_al_95, bertrand2004much}. The validity of our DID approach depends on the the assumption that the `Earthquake affected' -Treatment
+and `Earthquake Unaffected' - Control follows the parallel trends in A1B in the pre-earthquake period. The significant pre-existing differences between the affected and unaffected districts could likely violate the parallel trends assumption which has been taken care by considering the mother level and parental level controls. Moreover, the natural disasters as earthquake are likely to induce selective migration of better off families to move out which is likely to bias the results. Likewise, the earthquake affected districts are likely to get differential exposure to reconstruction and rehabilitation policies thereby affecting the fertility decisions of people.
+
+%\todo{Limitations} \todo[inline]{1.Did the earthquake stop some women from having first births at all?\\
+%2.How many women significantly delayed birth beyond your window?\\
+%3. What effect could it provide with the timing of conception?\\
+%4. Selection bias: Women who had not had birth within the time window but later on don't appear in the sample.}
+
+\vspace{0.25cm}
+
+The earthquake provides an ideal natural experimental setting as the timing and distribution were exogeneous to existing A1B distribution. 2015 earthquake was due to tectonic forces independent of the socio-economic conditions or administrative and demographic boundaries. This ensures that assignment of treatment group is as good as random.
+
+\vspace{0.25 cm}
+
+The remainder of this paper is organized as follows. Section 2 provides background on the 2015 Gorkha earthquake and describes the data sources from NDHS (2011, 2016, 2022) and the construction of foreign employment related variables. Section 3 outlines our difference-in-differences empirical methodology and identifies the causal effect of earthquake exposure on age at first birth. Section 4 presents our main results, including overall impact estimates followed by heterogeneous treatment effects and robustness checks across different model specifications. Section 5 investigates mechanisms through partner migration, maternal employment, and occupational channels that explain how disasters affect fertility timing.  Section 6 presents the conclusion.
+
+\section{Data}
+
+
+
+\subsection{The 2015 earthquake} 
+
+
+Nepal is a landlocked nation spanning 147,181 square kilometers, bordered by India on three sides and China to the north. The country comprises seven provinces and 77 administrative districts, which are further divided into Rural Municipalities (``Gaonpalika'') and Municipalities. Nepal's terrain encompasses three distinct ecological zones: mountains (35\%), hills (42\%), and the Terai plains (23\%).
+On April 25, 2015, the devastating Gorkha earthquake struck Nepal with a moment magnitude of 7.8, affecting approximately 8 million people and causing economic losses of \$10 billion—equivalent to half of Nepal's gross domestic product at the time \citep{paudel2023spillover}. The disaster claimed nearly 9,000 lives and damaged approximately 712,000 homes nationwide \citep{shakya2022natural}. 
+
+\vspace{0.25cm}
+
+\subsection{Data Sources and Construction}
+The Demographic and Health Surveys (DHS) for Nepal in 2011, 2016, and 2022 collect comprehensive household and individual-level data. These datasets provide detailed information on demographic, health, and socioeconomic factors of women aged 15-49. Specifically, the surveys include detailed birth histories for each woman, including the date of first birth, total number of children ever born, birth order, and spacing between births. These allow for precise calculation of age at first birth, as well as examination of fertility patterns over time. It also provides information on  maternal and household characteristics, including the mother's age at birth, education, employment status, occupation, health conditions, antenatal care visits, and access to clean water and sanitation. Additionally, the surveys capture similar information for fathers, such as their A1B, education, employment status, and occupation. For the purpose of this paper, we have aggregated the individual level data to the district level data for each of these three rounds of survey. Our main variable of interest - A1B - comes from the DHS dataset. Moreover, other control variables related to mother and the partner also comes from the same dataset.
+%\todo{Discuss more on how final sample was constructed for this study} \todo[inline]{}
+
+\vspace{0.25 cm}
+
+Our treatment and comparison groups are constructed based on classifications from the National Reconstruction Authority (NRA), which designated 14 districts (out of 75 total districts) as ``severely affected'' by the earthquake \citep{npc2015}. The classification of the districts by NRA is shown in Figure~\ref{classification districts}. The districts labelled "Severely Hit" and "Crisis Hit" were considered as the treated districts. The detailed list of the Earthquake Affected (Treatment) and Less Affected (Control) is provided in the Appendix.
+
+
+\vspace{0.25 cm}
+
+
+District-level population projections are obtained from the National Planning Commission Secretariat and Central Bureau of Statistics for the years 2011, 2013, 2015, and 2017, with missing years interpolated using standard demographic techniques. We transform the international labor migration data by calculating the natural logarithm of migration rates per 100,000 population for each district, providing a normalized measure that accounts for population size differences across districts and reduces the influence of outliers in the migration data. Additionally, we utilize district-level data on work permits issued annually from fiscal year 2010/11 through 2016/17, sourced from the Department of Foreign Employment (DoFE), Nepal's authorized institution for issuing work permits to citizens seeking overseas employment. 
+
+\subsection{Summary Statistics:}
+
+To assess the comparability of the treatment and control groups and to evaluate potential confounding prior to causal analysis, a balance table (Table~\ref{tab:descriptive_stats}) was constructed using key demographic and socioeconomic covariates measured both before and after the earthquake. A1B for the women in the treatment group were significantly higher (mean difference = $0.754$ years, $p < 0.01$) and had longer average birth gap (mean difference = $6.148$ months, $p < 0.01$) compared to the control group. These differences persisted in the post-treatment period. The increased mean difference after the earthquake suggests likely effect of the earthquake. 
+
+\vspace{0.25cm}
+
+Furthermore, disparities in terms of educational attainment of mother is another feature of the sample we have. Earthquake-affected districts had a lower proportion of women with no education (5.7\% vs. 10.9\%) and just primary education (5.7\% vs. 8.4\%), but higher proportions with advanced education (3.9\% vs. 1.9\%) and more likely to have a partner with more education. These differences were statistically significant.
+
+\vspace{0.25 cm}
+
+Ethnic composition of mother was another area of imbalance; the treatment group included significantly higher share of Janajati while fewer Dalit and Muslim individuals against the control group, across the pre-earthquake and post-earthquake period. Occupational distributions added to the pattern of socioeconomic differentiation: mothers with Professional, Technical and Managerial occupation  in treatment group are significantly higher than mothers in control group before and after the earthquake, while mother in control group were more concentrated in skilled manual and agricultural labor. However, partners in control group before and after the earthquake were more concentreated in unskilled manual labor. Additionally, treatment group households reported fewer children on average, a difference that remained consistent and statistically significant in both periods.
+
+\vspace{0.25 cm}
+
+In contrast, some variables—such as the logarithm of the partner’s migration rate and partner’s age—did not differ significantly between groups, suggesting limited heterogeneity in those characteristics. Thus, persistence of the imbalances in variables such as education, employment, ethnicity, and fertility raise concerns about confounding factors. To overcome the bias we consider controlling for Mother and Partner level characteristics and employing the fixed effect in our DID specification.
+
+
+\vspace{0.25 cm}
+
+These systematic pre-earthquake differences raise important questions about the parallel trends assumption in relation to our difference-in-differences approach. The differences in the treated and control districts suggests that these districts might be different in terms of fertility decision even without the earthquake. However, the differences are observable and can be controlled for maternal and partner's characteristics. Additionally, the intensity and timing of earthquake were determined by natural factors. Furthermore, consideration of time and district fixed effects would adress the time invariant differences between the districts.
+
+\vspace{0.25cm}
+
+\section{Empirical Approach: }
+
+
+We start our analysis by examining how the change in A1B differs between districts severely affected by the event and those that remained unaffected. To quantify this difference, we employ a standard difference-in-differences (DID) model, which can be expressed by the following equation:
+\begin{equation}
+Age \hspace{0.15 cm} at \hspace{0.15 cm} First \hspace{0.15 cm} Birth_{dt} = \beta_{0} + \beta_{1} \Big(treat_{d} \times post \Big) + \beta_{2} \hspace{0.1 cm} treat_{d} + \beta_{3} \hspace{0.1 cm} post + X_{d}\theta  + \zeta_{d} + \delta_{t} + \varepsilon_{dt}    
+\end{equation}
+
+\noindent where index $d$ represents the district, and $t$ represents birth year of the child. A1B is the outcome variable of interest $treat_{d}$ is a binary indicator which takes a value of 1 if the district is one of the severely affected district (treated group) and 0 for other districts (comparison group). $post$ takes a value of 1 for post April 2015 earthquake and 0 otherwise. The interaction $treat_{d} \times post$ is the binary treatment indicator, which takes a value of 1 if the sample is from the earthquake affected districts and the sample is born after the April 2015 earthquake and 0 otherwise. $X$ is the set of control variables related to A1B. $\zeta_{d}$ is the district-fixed effects that address the time-invariant district-level unobserved heterogeneity and $\delta_{t}$ is the year-fixed effect. $\varepsilon_{dt}$ denotes the error term. 
+
+\vspace{0.25 cm}
+
+The coefficient $\beta_{0}$ is an intercept term which gives the average A1B before the earthquake among untreated comparison districts. The coefficient $\beta_{2}$ provides the difference between the average A1B before earthquake between individuals in treated and untreated comparison districts. The coefficient $\beta_{3}$ shows the difference between the average A1B before and after earthquake among comparison districts. Finally, $\beta_{1}$ is the parameter of interest that quantifies the change in the average A1B in treated districts affected by the earthquake compared to the unaffected comparison group after controlling for time and district-invariant unobserved heterogeneity.
+
+\vspace{0.25 cm}
+
+Furthermore, $X_d$ includes the district level covariates specifying the mother or partner's characteristics. Specifically, the mother level controls we have considered are: Mother's Employment status; whether they are employed all year, seasonally or occasionally, Mother's ethnicity, Mother's Age at marriage, Mother's Occupation, Mother's Educational Attainment, Mother's Age, Number of union the mother, Whether Mother is working or not, total number of children, average birth gap. Additionally, we have used the partner's characteristics as covariates which include, Partner's educational attainment, Partner's Occupation, and Partner's Age. 
+
+\vspace{0.25 cm}
+
+The identification strategy that we have used follows the previous approaches in the disaster related economic literature \citep{paudel2023spillover,nandi2018effect,andrabi2017aid}. Because of the exogeneous nature of seismic events, it has been widely used in literature providing credible identification \citep{felbermayr2014naturally}. Combination of this exogeneity and the set of controls and fixed effects are likely to provide us the casual explanation of earthquake on A1B. 
+
+\vspace{0.25 cm}
+
+Furthermore, we investigated the parallel trends assumption with the graph and a formal statistical test. The graphical analysis is presented in Figure~\ref{fig:parallel trend} and the test result is presented in Table~\ref{tab:ptrends}. The validity of our DID approach is supported by parallel trends in the pre-treatment period and no anticipation effects. The parallel trend test shows that we do not reject the null hypothesis of parallel trends at conventional significance levels. Likewise, the Granger Causality test strongly supports no anticipation assumption which is intuitive given the unpredictable nature of earthquakes. In sum, these tests provide support for the validity of our identification strategy, assuring credibility to the causal interpretation of our main results.   
+
+\vspace{0.25 cm}
+
+\section{Results}
+
+Table \ref{summary did} presents the results of five ordinary least squares (OLS) regression models estimating the effect of the 2015 earthquake on A1B, using a Difference-in-Differences (DID) specification. The interaction term, Post-Earthquake $\times$ Earthquake Affected, captures the causal effect of earthquake exposure on the outcome. Across all specifications, in order to account for potential correlation in unobserved factors within districts, standard errors are clustered at the district level and are reported in parentheses, and statistical significance is indicated using conventional thresholds.
+
+\vspace{0.25cm}
+
+
+
+\vspace{0.25cm}
+
+In the baseline specification (Column 1), which does not include fixed effects and controls, the coefficient on the interaction term is 1.441 (p $<$ 0.01), indicating that, on average, women in earthquake-affected districts gave birth to their first child approximately 1.41 years later than women in non-affected districts after the earthquake. This estimate is statistically significant at the 1\% level and suggests a sizable delay in fertility timing associated with the earthquake shock. Column 2 incorporates birth year and district fixed effects albeit we do not control for mother and partner characteristics, we obtain the magnitude of the interaction coefficient reduced to 0.608 statistically significant at the 5\% level. This reduction in the coefficient suggests that the impact on A1B is likely because of the systematic differences between treated and control areas rather than pure earthquake.
+
+\vspace{0.25cm}
+
+Subsequent models introduce controls associated by fixed effects to account for observable and unobservable heterogeneity in the decision making related to A1B. In Column 3, we include an extended set of maternal characteristics, but without partner's characteristics, the effect is statistically significant (coefficient = 0.424) at 5\%., indicating that some of the observed delay in fertility timing may be attributable to maternal characteristics.
+Columns 4 includes only partner characteristics with district and birth year fixed effect. The coefficient increases to 0.600 statistically significant at 5\%. Column 5 further refine the estimation with mother's characteristics, partner's characteristics, birth-year and district fixed effect.The coefficient results to 0.402 significant at 5\%. These results in Column 3-5 suggest that earthquake significantly delays the A1B for women in affected districts by approximately 4.8 months (0.402 years), even after controlling for district, time, maternal, and partner characteristics. This suggests that our estimates are less likely to be biased with unobserved heterogeneity.
+
+\vspace{0.25cm}
+
+The specification in Column 5 indicates that the earthquake significantly delayed A1B for women in earthquake-affected districts by approximately 4.8 months (0.402 years), representing about 2\% increase relative to the pre-earthquake baseline. This effect consistent with the theoretical mechanisms linking disaster exposure to fertility decision making of women. 
+
+\vspace{0.25cm}
+
+Full table provided in the appendix (Table A1) presents the estimates against the control variables used in the estimation process. The control variables reveal several important demographic patterns in childbearing timing. Mother's age has the strongest positive effect (0.6) with $p<0.01$, reflecting that older women have first births later. Ethnicity plays a significant role, with most ethnic groups (Brahmin/Chhetri, Janajati, Dalit) showing negative coefficients, suggesting they have earlier first births. Socioeconomic factors also matter: mothers in skilled manual occupations and those with partners who have higher education tend to delay first births (positive coefficients of 0.055 and 0.046 respectively), likely reflecting tradeoff between economic opportunities and child raising costs. 
+
+\vspace{0.25 cm}
+
+These findings strongly support the theoretical mechanisms outlined in previous section. The 4.8-month delay is in line with the economic uncertainty that households face after the disaster.  The stability of our estimates across specifications provides confidence that we are identifying the causal impact of earthquake exposure rather than spurious correlations.
+
+\vspace{0.25 cm}
+
+\section{Mechanisms: Channels Linking Earthquake Exposure to A1B}
+
+In order to investigate into the mechanism by which the earthquake has an impact on A1B, we tested for occupation of the mother. Brief discussion of the plausible channels are discussed below.
+
+\vspace{0.25 cm}
+
+\subsection{Employment by Mother's Occupation:}
+
+
+
+We analyzed the differential impact of earthquake across different Occupation of Mother. We investigated the effect initially looking into the sample period of 2010 to 2016 in Table~\ref{tab:mom occupation summary} and for the whole sample in Table~\ref{tab:mom occupation full sample summary}. Moreover, the detailed estimates including the covariates is shown in Appendix in Table A2.
+
+\vspace{0.25 cm}
+This occupation channel is particularly relevant because with the onset of earthquake, people experienced exogeneous shock to local labor demand, especially in the sectors related to reconstruction.
+Based on the regression results in Table~\ref{tab:mom occupation full sample summary} we examine a key mechanism through which the 2015 earthquake may have increased women's A1B - by changing their occupational opportunities and labor market participation. The results show that over the extended period (2010-2019), the earthquake led to a massive 200.2 percentage point increase in women's likelihood of working in skilled manual occupations, which likely reflects sustained demand for skilled manual jobs including construction related jobs. This shift into skilled manual work shows that there is a significant change in women's economic roles, other than household related jobs. Moreover, women were found less likely to work in sales/services (-40.1 percentage points) significant at 5\%, suggesting reduced opportunities in more flexible, family-compatible employment sectors.
+
+\vspace{0.25cm}
+
+
+These occupational changes provide a possible channel for delayed A1B, as increased participation in skilled manual work likely required women to allocate more time in developing new skills, maintaining employment schedules, and eventually reducing time at home. The shift away from sales/services work, which has more flexible schedules that helps with early childbearing, toward skilled manual work may have incentivized women to delay pregnancy. Additionally, the increased economic opportunities and earning potential in reconstruction-related work may have raised the opportunity cost of early childbearing. This occupational reallocation thus represents a concrete mechanism linking the earthquake's economic disruption to changes in A1B.
+
+\vspace{0.25cm}
+
+Moreover, the evaluation of the age based impact of earthquake in employment decision, we find that all age groups were affected in a similar manner. Age based breakdown of the impact is shown in Table~\ref{tab:mom_agegroup_occupation}. These age-differential occupational impact shows that women aged 20-39 are significantly increasing their occupational choices towards skilled manual which is persistent even after the earthquake.
+
+\vspace{0.25cm}
+
+\subsection{Age of Marriage Channel}
+This study considers tha age of cohabitation as the age of marriage primarily due to the fact that unmarried couples cohabiting is not a norm in Nepalese society. Table~\ref{tab:marriage age mechanism summary} shows the impact of earthquake on age of marriage which is significant and positive (about 6 months, $p<0.01$) indicating that women in earthquake districts after the earthquake have delayed their first birth likely due to delayed marriage which is consistent with the findings of \citet{baizan2003cohabitation}. Moreover, investigating the age composition of the impact on age at marriage, in Table~\ref{tab:marriage age by age category} we find that the women at later ages have increased their age of marriage and the women at later ages have increase A1B. 
+
+\vspace{0.25cm}
+
+The impact of the earthquake on marriage timing exhibits significant heterogeneity across age groups, as shown in Table~\ref{tab:marriage age by age category}. Women aged 15-19 experienced non-significant delays in marriage age (0.199 years), while women in their early twenties (20-24) faced moderate delays of approximately 6.2 months (0.516 years, $p < 0.1$). The effects become progressively stronger with age: women aged 25-29 delayed marriage by 5.7 months (0.472 years, $p < 0.05$), those aged 30-34 by 7.5 months (0.627 years, $p < 0.01$), and most dramatically, women aged 35-39 postponed marriage by nearly 11 months (0.899 years, $p < 0.01$).
+
+\vspace{0.25cm}
+
+The delay in the marriage is likely reflecting the economic disruptions caused by damages and families are deciding the postponement of marriages due to low economic resources, shifting of the priorities after the earthquake or women entering into the labor market resulting to increased bargaining power of women. 
+
+\vspace{0.25cm}
+
+\subsection{Partner Migration Channel}
+
+\citet{massey1993theories} argue that migration is responsible for demographic change influencing fertility. Moreover,  
+\citet{lindstrom2002short} also find that migration affects the fertility behavior due to reduction in physical presence of the husband and due to the change in the economic conditions, and family planning decisions of the women left behind. \citet{govnepal2020} report that total migrants in Nepal has increased by about 1.5 times in the ten year period (2011-2021, 1.76\% of the total population to 2.16\% of the total population). This increase in the migration of Nepalese youth for employment is likely to alter the fertility decisions of women including A1B. 
+
+
+\vspace{0.25cm}
+
+Moreover, \citet{stark1985new} argue migration as collective decision making of the household and a household might send their member to migrate to insure against risk which is prominient during times of calamities. Thus, it is likely that the households in Nepal after 2015 more individuals are migrating abroad and impacting the fertility decisions of having new child later. \citet{nobles2013migration} also finds the similar evidence and argues that women whose partners migrate delay the childbirth.
+
+ \vspace{0.25cm}
+
+ Additionally, the migration related to foreign employment channelise a pool of alternative resources for households. Due to improved economic condition households will trade-off quality for quantity of children \citep{becker1973interaction} which likely induces women to postpone the childbearing. \citet{nobles2014effects} also find that migration can delay the marriage and therby delay the first birth of child. To sum up, it is likely that the A1B in Nepal has gone up due to increased migration as a coping mechanisms against economic damages.
+
+
+\vspace{0.25cm}
+
+
+
+
+
+
+\section{Heterogeneity Analysis}
+
+\subsection{Heterogeneous Impact by Mother's Age}
+
+To explore how the impact of the 2015 earthquake on A1B varies across different maternal age groups, we estimate a series of Difference-in-Differences (DID) models based on the mother's age at the time of survey. We investigate the impact by looking into the sub-sample of 2010-2016 and for the full sample. The results for full sample is presented in Table~\ref{tab:Full Sample mother's age summary} and the the detailed table is presented in Table A5 in the appendix.
+
+\vspace{0.25cm}
+
+
+
+The results reveal that earthquakes have varying effects on different age group of women. The impact on all age group is positive, indicating that exposure to the incidents of earthquake make women likely to decide on the postponement of their first childbirth compared to women who are not exposed women. Younger women (15-19) experience non-significant delays in A1B, while women in their prime reproductive years (20-24) face substantial and statistically significant delay of approximately 5 months which is higher than the sub-sample analysis in Table in Appendix. Most strikingly, older women (35-39) experience the largest delays of nearly 9 months, across the sub-sample and full sample.
+
+\subsection{Heterogeneous Impact by Mother's Ethnicity}
+
+We investigated the impact of earthquake by mother's ethnicity for the period 2012-2016 and for the whole sample period. The detailed estimates for the heterogeneous impact in the period 2010-2016 and for the whole period are presented in Table A6 and Table A7  in the appendix. The summarized version of the impact of earthquake by ethnicity of mother is presented in Table~\ref{tab:ethnicity full}.
+
+
+The results demonstrate that mothers from all ethnic groups delay A1B due to earthquake. However, we can observe notable variation in the magnitude of effects. Compared to sub-sample analysis in Table in the appendix, the delay in A1B reduces as the impact of earthquake reduces for all ethnic groups. Brahmin/Chhetri and Dalit experience moderate delays of approximately 5 months that are highly statistically significant. However, Janajatis show about 6 months delay immediately after the earthquake while in the longer term they delay the A1B by half. Muslim women experience substantially larger delays of nearly 10-12 months, representing the most severe impact among all ethnic groups examined, with coefficients nearly double those of other groups.
+
+\vspace{0.25cm}
+
+\subsection{Heterogeneous Impact of the Earthquake by Mother's Education}
+
+We analyzed the differential impact of earthquake on A1B across different levels of mother's education. We initially analyzed by taking the sample period from 2012 to 2016 provided in Table in the appendix and then by considering the whole sample period. The snippet of the results for the analysis is presented in Table~\ref{tab:mother's education full} and the detail results is presented in Table A8 (sub-sample, 2010-2016) and Table A9 (Full sample) in the Appendix.
+
+
+The results reveal that earthquakes delay A1B across all education levels, but with a distinctive pattern where women with higher education face the least impact. Women with no education, primary education, and secondary education all experience substantial and highly significant delays of approximately 6-7 months (coefficients ranging from 0.539 to 0.557) immediately after the earthquake. In contrast, women with higher education face smaller delays of about 4 months (0.335), with lower statistical significance immediately after the earthquake. However, when full sample is taken into consideration the women with no education or primary education delay the birth by approximately 5 months and the women with secondary and higher education delay their first birth by approximately 3 to 4 months suggesting that advanced education may provide resources or flexibility that help mitigate earthquake impacts on fertility timing.
+
+\vspace{0.25cm}
+
+The heterogeneous impact of earthquake on the basis of education  likely reflects differences in economic resilience, social capital, and adaptive capacity. Women with higher education may have better access to financial resources, more stable employment, stronger social networks, or greater agency in reproductive decision-making. 
+
+\vspace{0.25 cm}
+
+\section{Robustness Checks}
+In order to assess the robustness of our findings, we re-estimate the main specification using varying definition of the post-earthquake period. We investigate how the impact of earthquake changes with consideration of both continuous range of years (2015-2016, 2015-2017 \& 2015-2018) and non-contaguous combinations (2015-2016 \& 2018, 2015-2016 \& 2019). Additionally, this would allow us to explore whether the impact is persistent and whether the short-term effects are mean reversal.
+
+\vspace{0.25 cm}
+
+Table \ref{tab:year wise table} presents five Difference-in-Differences (DID) models that assess the immediate and medium-run impact of the 2015 earthquake on the dependent variable. Each model includes fixed effects for birth year and district, and covariates capturing maternal and partner characteristics.
+
+\vspace{0.25 cm}
+
+
+
+\vspace{0.25 cm}
+
+The main coefficient of interest across all five models is the interaction term Post-Earthquake $\times$ Earthquake Affected, which captures the treatment effect of being in an earthquake-affected area after the 2015 earthquake. The results suggest a consistently positive and statistically significant effect across Columns (1) through (5). For instance, in Column (1), investigating the impact for the period 2015–2016, the earthquake is associated with a 0.604-unit increase in the A1B ($p < 0.1$). This effect increases slightly in Column (2) (2015–2017, coefficient = 0.608) and remains statistically significant at 1\% whereas the effect reduces in Column (3) (2015–2018, coefficient = 0.486, $p < 0.01$). Although the coefficient decreases slightly in Columns (4) and (5), which extend the years to include 2018 and 2019 respectively, it remains positive and significant (Columns 4: 0.455, $p < 0.1$) and statistically significant (Column 5: 0.420, $p > 0.05$), suggesting a persistent but gradual reduction of the effect.
+
+\vspace{0.25cm}
+
+The detailed table is presented in the appendix in Table A3 with the estimates against the covatiates. Control variables show consistent patterns that enhance the credibility of the estimates. Maternal age emerges as a strong predictor of delayed fertility (coefficients between 0.548 and 0.608, all significant at $p < 0.01$), mother's occupation as Skilled Manual show a persistent impact on A1B. Partner's age show consistently negative association. Taken together, the results reiterate the impact of earthquake on A1B as in the main results-the impact is persistent and the impact slows down even with the alternative window of time taken.
+
+\vspace{0.25cm}
+
+Furthermore, we also analysed whether the channel linking earthquake to A1B is valid for the sub-sample analysis. We investigated whether the channels show a consistent pattern considering the sample for the period 2010-2016.
+Based on the regression results in Table~\ref{tab:mom occupation summary}, the analysis reveals substantial heterogeneity in how the 2015 earthquake affected fertility timing across different occupational groups.
+The table examines how the 2015 earthquake affected women's occupational choices, with each column representing a binary indicator for whether a mother works in that specific occupation. The key finding is that the earthquake significantly increased women's probability of working in most occupational categories in affected areas compared to unaffected areas. Specifically, women in earthquake-affected regions became 61.5 percentage points more likely to work in professional/technical/managerial roles, 90.5 percentage points more likely to work in clerical positions, 49.9 percentage points more likely to engage in skilled manual work, and 53.4 percentage points more likely to work in agriculture. Only sales/services showed no significant change.
+
+\vspace{0.25cm}
+
+
+
+\vspace{0.25cm}
+
+These substantial increases across multiple sectors suggest the earthquake fundamentally altered women's economic participation patterns, likely driven by economic necessity following the disaster. The large effect sizes indicate that many women who previously did not work in these sectors entered the workforce, possibly due to loss of household income, destruction of assets, or new opportunities created by reconstruction efforts. The particularly strong effects in white-collar occupations (professional and clerical work) alongside agriculture suggest both urban and rural women adapted their economic strategies in response to the earthquake's impact. The high explanatory power of the models (R-squared values of 0.82-0.98) and comprehensive controls for individual and household characteristics strengthen confidence in these findings.
+
+\vspace{0.25cm}
+
+\section{Conclusion}
+
+This study provides the first comprehensive analysis of how Nepal's 2015 Gorkha earthquake affected women's age at first birth (A1B). Using a difference-in-differences approach with data from three rounds of the Nepal Demographic and Health Survey (2011, 2016, 2022), we find that women in earthquake-affected districts delayed their first birth by approximately 4.8-7.2 months (0.4-0.6 years) compared to women in unaffected areas. These effects remained robust across multiple model specifications and persisted for at least four years following the disaster. This demonstrates that natural disasters can have lasting demographic consequences.
+
+\vspace{0.25 cm}
+
+The analysis shows substantial heterogeneity in earthquake impacts across population subgroups. Women aged 30-39 experienced the largest delays, while Muslim women were impacted the largest (0.9-1.0 years delay). Higher-educated women were found with smaller delays compared to those with limited education. This might be due to differences in occupational choices based on their education. Our mechanism analysis reveals that the earthquake increased women's likelihood of working in skilled manual occupations by 200 percentage points ($p < 0.01$), representing a key channel linking earthquake exposure to increase in A1B through shift in possibly reconstruction related occupation.
+
+\vspace{0.25 cm}
+
+These findings contribute to the impact of disaster on fertility literature by revealing how large-scale natural shocks as earthquake influence fertility behaviour in developing countries. The differential impacts across ethnic groups, education levels, and age cohorts shows how different population groups are affected. The persistent nature of these effects show that changes in demographic behavior continue for a longer period of time.
+
+\vspace{0.25cm}
+While we identify occupational shift as a key mechanism, other potential channels as age of marriage, access to family planning services, education remain unexplored. Future research can move along this dimension for further understanding of the behavioral change.
+
+
+\newpage
+\bibliographystyle{dcu}
+\bibliography{references}
+
+\newpage
+\appendix
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Presentation Slides/earthquake-affected.png}
+    \caption{Classification of Districts}
+    \label{classification districts}
+\end{figure}
+
+\newpage
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Treatment and Control Districts}
+    \vspace{0.5cm}
+    \input{Tables New/List of Districts}
+        \label{tab:classification}
+\end{table}
+
+\newpage
+\input{Tables New/Balance Table}
+
+
+
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Figures/Event-study.png}
+    \caption{Event-study: 2015 Earthquake and A1B}
+    \label{fig:placeholder}
+\end{figure}
+
+
+\vspace{3cm}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Figures/trendplot.png}
+    \caption{Graphical presentation of Parallel Trends}
+    \label{fig:parallel trend}
+\end{figure}
+
+\newpage
+\begin{table}[htbp]
+\centering
+\caption{Test of Parallel Trends Assumption}
+\label{tab:ptrends}
+\input{Tables New/Parallel trend assumption}
+\end{table}
+
+
+
+
+
+\newpage
+\begin{table}[htbp]
+    \centering
+    \caption{Impact of Earthquake on Age at First Birth}
+    \label{summary did}
+    \input{Tables New/Summary of DID}
+\end{table}  
+
+\newpage
+\begin{table}[htbp]
+    \caption{Partner Migration as a Mechanism}
+    \label{tab:partner migration summary}
+    \input{Tables New/Mechanism Partner Mig Short}
+\end{table}
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact of 2015 Earthquake on Working Mother}
+    \label{tab:mom working mechanism}
+    \input{Tables New/Mechanism Working Mother Summary}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact of 2015 Earthquake on Mother' Occupation (2010-2016)}
+    \label{tab:mom occupation summary}
+    \input{Tables New/Mother's Occupation 2016 Summary}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact of 2015 Earthquake on Mother' Occupation (Full Sample)}
+    \label{tab:mom occupation full sample summary}
+    \input{Tables New/Mother's Occupation Full Summary Mechanism}
+\end{table}
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact of Earthquake on Marriage Age}
+    \label{tab:marriage age mechanism summary}
+    \input{Tables New/Mechanism Marriage Age Short}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact of Earthquake on Marriage Age by Age Categories}
+    \label{tab:marriage age by age category}
+    \input{Tables New/Mechanism Marriage Age by Age group}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \caption{Impact on Occupation by Age Categories}
+    \label{tab:mom_agegroup_occupation}
+    \input{Tables Appendix/Occupation by Age group}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \caption{Year-wise breakdown of the Impact of Earthquake}
+    \label{tab:year wise table}
+    \input{Tables New/OLS Yearwise Summary}
+\end{table}
+
+
+\newpage
+\begin{table}[htbp]
+    \centering
+    \caption{Heterogeneous Impact by Mother's Age (Full Sample)}
+    \label{tab:Full Sample mother's age summary}
+    \input{Tables New/Mothers Age Summary Full}
+\end{table}
+
+\newpage
+\begin{table}[htbp]
+    \caption{Heterogeneous Impact by Mother's Ethnicity (Full Sample)}
+    \label{tab:ethnicity full}
+    \input{Tables New/Ethnicity Whole Sample Summary}
+\end{table}
+
+\newpage
+\begin{table}[htbp]
+    \caption{Heterogeneous Impact Across Mother's Education: Full Sample}
+    \label{tab:mother's education full}
+    \input{Tables New/Mother's Education Whole Summary}
+\end{table}
+
+\end{document}

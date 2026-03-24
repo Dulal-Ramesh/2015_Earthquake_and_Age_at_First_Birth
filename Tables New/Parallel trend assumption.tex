@@ -1,0 +1,33 @@
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1.4}
+\small
+\setlength{\tabcolsep}{15pt}
+
+
+\vspace{0.2cm}
+\begin{flushleft}
+
+\begin{tabular}{@{}p{7.5cm}*{2}{c}@{}}
+\hline \hline
+\addlinespace[0.5em]
+ & Parallel Trends Test & No Anticipation \\
+\addlinespace[0.5em]
+\midrule
+\addlinespace[0.3em]
+F-statistic & 3.59 & 0.97 \\
+& (1, 73) & (4, 73) \\
+\addlinespace[0.2em]
+p-value & 0.0620 & 0.4291 \\
+\addlinespace[0.3em]
+\hline \hline
+\end{tabular}
+\vspace{3pt}
+
+\begin{tablenotes}
+\footnotesize    
+\item \textit{Notes:} The null hypothesis for the Parallel Trends Test is ``Linear trends are parallel.'' The null hypothesis for the No Anticipation test is ``No effect in anticipation of treatment.'' Degrees of freedom are reported in parentheses. Standard errors are clustered at the district level.
+\end{tablenotes}
+
+\end{flushleft}

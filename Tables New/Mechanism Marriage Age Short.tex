@@ -1,0 +1,26 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1.4}
+\small
+\setlength{\tabcolsep}{12pt}
+\begin{flushleft}
+\begin{tabular}{@{}p{11cm}*{1}{c}@{}}
+\hline\hline
+Variable & Mother's Marriage Age \\
+\hline
+Post-Earthquake × Earthquake Affected & 0.467\sym{***} \\
+                                      & (0.14) \\
+\hline
+Mother's Characteristics              & YES \\
+Partner's Characteristics             & YES \\
+\hline
+Birth Year FE                         & YES \\
+District FE                           & YES \\
+R-sqr                                 & 0.783 \\
+Observations                          & 733 \\
+\hline\hline
+\end{tabular}
+\vspace{4pt}
+\noindent\footnotesize
+Standard Error in parentheses \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)\\
+\textit{Mother's Characteristics include Average Birth Gap, Mother's Education, Mother's Ethnicity, Mother's Age, Number of Union and Number of Kid. Partner's Characteristics include Partner's Education, Partner's Occupation, Partner's Age. Detailed Table is shown in the Appendix.}
+\end{flushleft}
