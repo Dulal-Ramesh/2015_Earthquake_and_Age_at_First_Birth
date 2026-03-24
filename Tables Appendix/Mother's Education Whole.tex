@@ -1,0 +1,100 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1}
+
+\begin{longtable}{l*{4}{c}}
+\caption{\parbox{\textwidth}{Heterogeneous Impact Across Mother's Education (Full Sample)}} \label{tab:education_groups_regression_alt} \\ 
+[-0.5em]
+\hline\hline
+                    & No Education & Primary & Secondary & Higher \\
+\hline
+\endfirsthead
+
+\multicolumn{5}{r}{\footnotesize \textit{(continued)}} \\
+\hline
+                    & No Education & Primary & Secondary & Higher \\
+\hline
+\endhead
+
+\hline \multicolumn{5}{r}{\footnotesize \textit{(continued on next page)}} \\
+\endfoot
+
+\hline
+\multicolumn{5}{l}{\footnotesize Standard Error in parentheses} \\
+\multicolumn{5}{l} {\footnotesize  \sym{*} \; \(p<0.1\),\quad \sym{**} \quad \(p<0.05\),\quad \sym{***} \quad \(p<0.01\)} \\
+\endlastfoot
+
+Post-Earthquake × Earthquake Affected & 0.447\sym{***} & 0.447\sym{***} & 0.398\sym{***} & 0.300\sym{*} \\
+                    & (0.12) & (0.14) & (0.15) & (0.17) \\
+\multicolumn{5}{l}{Mother's Employment} \\
+\hspace{1em}All Year Employed & 0.003 & -0.002 & 0.001 & 0.005 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Seasonal Employed & -0.029 & -0.032\sym{*} & -0.034\sym{**} & -0.026 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Occasional Employed & -0.023 & -0.020 & -0.017 & -0.021 \\
+                    & (0.02) & (0.02) & (0.02) & (0.03) \\
+\multicolumn{5}{l}{Mother's Occupation} \\
+\hspace{1em}Professional/Technical/Managerial & -0.034 & -0.025 & -0.033 & -0.036 \\
+                    & (0.03) & (0.03) & (0.02) & (0.03) \\
+\hspace{1em}Clerical & -0.009 & 0.018 & 0.014 & 0.007 \\
+                    & (0.04) & (0.03) & (0.03) & (0.04) \\
+\hspace{1em}Sales and Services & 0.002 & 0.011 & 0.009 & -0.001 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Skilled Manual & 0.055\sym{***} & 0.061\sym{***} & 0.063\sym{***} & 0.049\sym{**} \\
+                    & (0.02) & (0.02) & (0.01) & (0.02) \\
+\hspace{1em}Unskilled Manual & -0.003 & 0.000 & -0.007 & 0.015 \\
+                    & (0.03) & (0.02) & (0.02) & (0.03) \\
+\hspace{1em}Agriculture & 0.018 & 0.026 & 0.020 & 0.021 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\multicolumn{5}{l}{Mother's Ethnicity} \\
+\hspace{1em}Brahmin/Chhetri & -0.036 & -0.048 & -0.042 & -0.039 \\
+                    & (0.03) & (0.03) & (0.03) & (0.03) \\
+\hspace{1em}Janajati & -0.034 & -0.044\sym{*} & -0.043\sym{*} & -0.036 \\
+                    & (0.02) & (0.02) & (0.02) & (0.03) \\
+\hspace{1em}Dalit & -0.049\sym{**} & -0.060\sym{**} & -0.055\sym{**} & -0.048\sym{*} \\
+                    & (0.02) & (0.02) & (0.02) & (0.03) \\
+\hspace{1em}Muslim & -0.016 & -0.029 & -0.028 & -0.016 \\
+                    & (0.02) & (0.03) & (0.02) & (0.02) \\
+\hspace{1em}Other & -0.031 & -0.040\sym{*} & -0.039\sym{*} & -0.026 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+Mother's Age & 0.614\sym{***} & 0.607\sym{***} & 0.653\sym{***} & 0.626\sym{***} \\
+                    & (0.03) & (0.04) & (0.04) & (0.04) \\
+Number of Union & 0.181 & -0.440 & -0.057 & -0.431 \\
+                    & (0.50) & (0.51) & (0.46) & (0.59) \\
+Working Mother & -0.370 & -0.423 & -0.357 & -0.466 \\
+                    & (0.30) & (0.26) & (0.37) & (0.34) \\
+Total no. of Children & -1.842\sym{***} & -1.830\sym{***} & -1.823\sym{***} & -1.700\sym{***} \\
+                    & (0.14) & (0.12) & (0.11) & (0.10) \\
+Average Birth Gap & -0.037\sym{***} & -0.035\sym{***} & -0.039\sym{***} & -0.029\sym{***} \\
+                    & (0.01) & (0.01) & (0.01) & (0.01) \\
+\multicolumn{5}{l}{Partner's Education} \\
+\hspace{1em}No Education & 0.027 & 0.032 & 0.033 & 0.034 \\
+                    & (0.02) & (0.03) & (0.02) & (0.02) \\
+\hspace{1em}Primary Education & 0.011 & 0.023 & 0.024 & 0.028 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Secondary Education & 0.025 & 0.031 & 0.036\sym{*} & 0.029 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Higher Education & 0.064\sym{**} & 0.070\sym{***} & 0.075\sym{***} & 0.083\sym{***} \\
+                    & (0.03) & (0.03) & (0.02) & (0.02) \\
+\multicolumn{5}{l}{Partner's Occupation} \\
+\hspace{1em}Professional/Technical/Managerial & 0.030 & 0.033 & 0.028 & 0.026 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Clerical & 0.010 & 0.007 & 0.006 & 0.000 \\
+                    & (0.01) & (0.01) & (0.01) & (0.01) \\
+\hspace{1em}Sales and Services & -0.027\sym{*} & -0.027\sym{*} & -0.031\sym{**} & -0.024\sym{*} \\
+                    & (0.02) & (0.02) & (0.02) & (0.01) \\
+\hspace{1em}Skilled Manual & 0.005 & 0.011 & 0.006 & -0.005 \\
+                    & (0.01) & (0.01) & (0.01) & (0.01) \\
+\hspace{1em}Unskilled Manual & 0.010 & 0.008 & 0.007 & -0.009 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Agriculture & 0.019 & 0.016 & 0.021 & -0.003 \\
+                    & (0.02) & (0.02) & (0.02) & (0.02) \\
+Partner's Age & -0.079\sym{***} & -0.051 & -0.071\sym{**} & -0.107\sym{***} \\
+                    & (0.02) & (0.03) & (0.03) & (0.03) \\
+\hline
+Birth Year FE & YES & YES & YES & YES \\
+District FE & YES & YES & YES & YES \\
+R-sqr & 0.819 & 0.840 & 0.841 & 0.894 \\
+Observations & 645 & 700 & 696 & 448 \\
+\hline \hline
+
+\end{longtable}

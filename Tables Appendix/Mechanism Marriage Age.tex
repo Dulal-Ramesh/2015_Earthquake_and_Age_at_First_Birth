@@ -1,0 +1,91 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% Setting table properties
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{15pt}
+
+\begin{longtable}{l*{1}{c}}
+\caption{\parbox{\textwidth}{Impact of 2015 Earthquake on Marriage Age}}\label{tab:age_first_birth_regression} \\
+[-0.5em]
+\hline\hline
+                    & Mother's Marriage Age \\
+\hline
+\endfirsthead
+
+\multicolumn{2}{r}{\footnotesize \textit{(continued)}} \\
+\hline
+                    & Mother's Marriage Age \\
+\hline
+\endhead
+
+\hline \multicolumn{2}{r}{\footnotesize \textit{(continued on next page)}} \\
+\endfoot
+
+\hline
+\multicolumn{2}{l}{\footnotesize Standard Error in parentheses} \\
+\multicolumn{2}{l}{\footnotesize \sym{*} \; \(p<0.1\),\quad \sym{**} \quad \(p<0.05\),\quad \sym{***} \quad \(p<0.01\)} \\
+\endlastfoot
+
+Post-Earthquake × Earthquake Affected & 0.467\sym{***} \\
+                    & (0.14) \\
+\multicolumn{2}{l}{Mother's Ethnicity} \\
+\hspace{1em}Brahmin/Chhetri & -0.086 \\
+                    & (0.06) \\
+\hspace{1em}Janajati & -0.082 \\
+                    & (0.06) \\
+\hspace{1em}Dalit & -0.098 \\
+                    & (0.06) \\
+\hspace{1em}Muslim & -0.070 \\
+                    & (0.06) \\
+\hspace{1em}Other & -0.088 \\
+                    & (0.06) \\
+\multicolumn{2}{l}{Mother's Education} \\
+\hspace{1em}No Education & 0.055 \\
+                    & (0.07) \\
+\hspace{1em}Primary Education & 0.039 \\
+                    & (0.07) \\
+\hspace{1em}Secondary Education & 0.073 \\
+                    & (0.07) \\
+\hspace{1em}Higher Education & 0.083 \\
+                    & (0.07) \\
+\multicolumn{2}{l}{Partner's Education} \\
+\hspace{1em}No Education & -0.002 \\
+                    & (0.03) \\
+\hspace{1em}Primary Education & -0.008 \\
+                    & (0.02) \\
+\hspace{1em}Secondary Education & -0.000 \\
+                    & (0.03) \\
+\hspace{1em}Higher Education & 0.021 \\
+                    & (0.03) \\
+\multicolumn{2}{l}{Partner's Occupation} \\
+\hspace{1em}Professional/Technical/Managerial & 0.019 \\
+                    & (0.02) \\
+\hspace{1em}Clerical & 0.018 \\
+                    & (0.02) \\
+\hspace{1em}Sales and Services & -0.016 \\
+                    & (0.02) \\
+\hspace{1em}Skilled Manual & 0.010 \\
+                    & (0.02) \\
+\hspace{1em}Unskilled Manual & 0.012 \\
+                    & (0.02) \\
+\hspace{1em}Agriculture & 0.024 \\
+                    & (0.02) \\
+Number of Union (Mother) & -2.216\sym{***} \\
+                    & (0.74) \\
+Mother Working & -0.027 \\
+                    & (0.32) \\
+Total Children (Mother) & -1.742\sym{***} \\
+                    & (0.18) \\
+Partner's Age & -0.095\sym{***} \\
+                    & (0.03) \\
+Average Birth Gap & -0.035\sym{***} \\
+                    & (0.01) \\
+Breastfed & 0.021 \\
+                    & (0.02) \\
+\hline
+Birth Year FE & YES \\
+District FE & YES \\
+R-sqr & 0.783 \\
+Observations & 733 \\
+\hline\hline
+\end{longtable}

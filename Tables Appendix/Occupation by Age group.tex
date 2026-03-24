@@ -1,0 +1,32 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1.4}
+\small
+\setlength{\tabcolsep}{4pt}
+
+\begin{flushleft}
+\begin{tabular}{@{}p{4cm}*{6}{c}@{}}
+\hline\hline
+Age Group & Prof./Tech./Man. & Clerical & Sales/Serv. & Skilled Man. & Unskilled Man. & Agri. \\
+\hline
+15--19 & 0.096 & 0.665\sym{**} & -0.389 & 0.849 & 0.571\sym{**} & -1.364 \\
+    & (0.28) & (0.28) & (0.83) & (0.97) & (0.28) & (1.21) \\
+\hline
+20--24                 &      -0.128         &       0.169         &      -0.334         &       1.896\sym{***}&       0.113         &      -0.231         \\
+                    &      (0.15)         &      (0.15)         &      (0.22)         &      (0.67)         &      (0.11)         &      (0.56)         \\
+\hline
+25--29                 &      -0.183         &       0.134         &      -0.336\sym{*}  &       1.973\sym{***}&       0.115         &      -0.002         \\
+                    &      (0.14)         &      (0.16)         &      (0.18)         &      (0.61)         &      (0.12)         &      (0.54)         \\
+\hline
+30--34                 &      -0.123         &       0.100         &      -0.335\sym{*}  &       1.822\sym{***}&       0.107         &      -0.017         \\
+                    &      (0.17)         &      (0.15)         &      (0.17)         &      (0.60)         &      (0.12)         &      (0.50)         \\
+\hline
+35--39                 &      -0.219         &       0.083         &      -0.238         &       2.461\sym{***}&       0.001         &      -0.210         \\
+                    &      (0.23)         &      (0.20)         &      (0.23)         &      (0.73)         &      (0.14)         &      (0.61)         \\
+\hline
+\midrule
+\end{tabular}
+\vspace{4pt}
+\noindent\footnotesize
+Standard Error in parentheses \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)\\
+
+\end{flushleft}

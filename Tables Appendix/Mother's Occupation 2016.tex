@@ -1,0 +1,94 @@
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{l*{5}{c}}
+\caption{\parbox{\textwidth}{Impact of Earthquake on A1B by Mother's Occupation Groups (2010-2016)}} \label{tab:occupation_groups_regression} \\ 
+[-0.5em]
+\hline\hline
+                    & (1) & (2) & (3) & (4) & (5) \\
+                    & Prof./Tech./Man. & Clerical & Sales/Services & Skilled Manual & Agri. \\
+\hline
+\endfirsthead
+
+\multicolumn{6}{r}{\footnotesize \textit{(continued)}} \\
+\hline
+                    & (1) & (2) & (3) & (4) & (5) \\
+                     & Prof./Tech./Man. & Clerical & Sales/Services & Skilled Manual & Agri. \\
+\hline
+\endhead
+
+\hline \multicolumn{6}{r}{\footnotesize \textit{(continued on next page)}} \\
+\endfoot
+
+\hline
+\multicolumn{6}{l}{\footnotesize Standard Error in parentheses} \\
+\multicolumn{6}{l} {\footnotesize  \sym{*} \; \(p<0.1\),\quad \sym{**} \quad \(p<0.05\),\quad \sym{***} \quad \(p<0.01\)} \\
+\endlastfoot
+
+Post-Earthquake × Earthquake Affected & 0.511\sym{**} & 1.624\sym{***} & 0.007 & 0.282 & 0.357\sym{*} \\
+                    & (0.22) & (0.00) & (0.20) & (0.24) & (0.21) \\
+\multicolumn{6}{l}{Mother's Employment} \\
+\hspace{1em}All Year Employed & 0.039\sym{**} & 0.031\sym{***} & 0.041\sym{***} & 0.027\sym{*} & 0.027\sym{*} \\
+                    & (0.02) & (0.00) & (0.01) & (0.01) & (0.01) \\
+\hspace{1em}Seasonal Employed & 0.037 & -0.240\sym{***} & -0.013 & 0.008 & 0.015 \\
+                    & (0.03) & (0.00) & (0.02) & (0.01) & (0.01) \\
+\hspace{1em}Occasional Employed & 0.061\sym{*} & 0.047\sym{***} & 0.026 & 0.008 & 0.018 \\
+                    & (0.04) & (0.00) & (0.03) & (0.03) & (0.02) \\
+\multicolumn{6}{l}{Mother's Ethnicity} \\
+\hspace{1em}Brahmin/Chhetri & -0.167\sym{***} & -0.135\sym{***} & -0.147\sym{***} & -0.106\sym{**} & -0.119\sym{***} \\
+                    & (0.06) & (0.00) & (0.04) & (0.04) & (0.04) \\
+\hspace{1em}Janajati & -0.132\sym{***} & -0.219\sym{***} & -0.129\sym{***} & -0.067\sym{*} & -0.083\sym{**} \\
+                    & (0.04) & (0.00) & (0.04) & (0.04) & (0.04) \\
+\hspace{1em}Dalit & -0.154\sym{***} & -0.386\sym{***} & -0.121\sym{***} & -0.068\sym{*} & -0.090\sym{**} \\
+                    & (0.05) & (0.00) & (0.04) & (0.04) & (0.04) \\
+\hspace{1em}Muslim & -0.063 & -1.176\sym{***} & -0.092\sym{**} & -0.041 & -0.058 \\
+                    & (0.06) & (0.00) & (0.04) & (0.04) & (0.04) \\
+\hspace{1em}Other Ethnicity & -0.143\sym{***} & 0.163\sym{***} & -0.123\sym{***} & -0.075\sym{**} & -0.092\sym{***} \\
+                    & (0.05) & (0.00) & (0.04) & (0.04) & (0.03) \\
+\multicolumn{6}{l}{Partner's Education} \\
+\hspace{1em}No Education & 0.030 & 0.250\sym{***} & 0.106\sym{***} & 0.074\sym{**} & 0.073\sym{**} \\
+                    & (0.04) & (0.00) & (0.03) & (0.03) & (0.03) \\
+\hspace{1em}Primary Education & 0.019 & 0.380\sym{***} & 0.083\sym{**} & 0.059\sym{*} & 0.058\sym{*} \\
+                    & (0.04) & (0.00) & (0.03) & (0.03) & (0.03) \\
+\hspace{1em}Secondary Education & 0.059 & 0.543\sym{***} & 0.103\sym{***} & 0.075\sym{**} & 0.077\sym{**} \\
+                    & (0.04) & (0.00) & (0.03) & (0.03) & (0.03) \\
+\hspace{1em}Higher Education & 0.115\sym{**} & 0.563\sym{***} & 0.159\sym{***} & 0.132\sym{***} & 0.129\sym{***} \\
+                    & (0.05) & (0.00) & (0.04) & (0.04) & (0.04) \\
+\multicolumn{6}{l}{Partner's Occupation} \\
+\hspace{1em}Professional/Technical/Managerial & -0.006 & -0.223\sym{***} & -0.039 & -0.047\sym{*} & -0.030 \\
+                    & (0.03) & (0.00) & (0.03) & (0.02) & (0.02) \\
+\hspace{1em}Clerical & -0.040 & -0.159\sym{***} & -0.037\sym{*} & -0.038\sym{**} & -0.036\sym{**} \\
+                    & (0.03) & (0.00) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Sales and Services & -0.065\sym{**} & -0.174\sym{***} & -0.058\sym{***} & -0.057\sym{***} & -0.055\sym{***} \\
+                    & (0.03) & (0.00) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Skilled Manual & -0.016 & -0.409\sym{***} & -0.038\sym{**} & -0.042\sym{**} & -0.031\sym{*} \\
+                    & (0.02) & (0.00) & (0.02) & (0.02) & (0.02) \\
+\hspace{1em}Unskilled Manual & -0.021 & -0.229\sym{***} & -0.058\sym{**} & -0.053\sym{**} & -0.036\sym{*} \\
+                    & (0.04) & (0.00) & (0.03) & (0.02) & (0.02) \\
+\hspace{1em}Agriculture & -0.070\sym{*} & -0.918\sym{***} & -0.050 & -0.073\sym{*} & -0.063\sym{*} \\
+                    & (0.04) & (0.00) & (0.03) & (0.04) & (0.04) \\
+\multicolumn{6}{l}{Household Characteristics} \\
+Mother's Age & 0.656\sym{***} & 0.242\sym{***} & 0.579\sym{***} & 0.634\sym{***} & 0.612\sym{***} \\
+                    & (0.05) & (0.00) & (0.07) & (0.05) & (0.04) \\
+Number of Unions (Mother) & -3.103\sym{*} & 3.472\sym{***} & -1.003 & -1.960\sym{**} & -1.675\sym{**} \\
+                    & (1.57) & (0.00) & (1.21) & (0.78) & (0.67) \\
+Mother Currently Working & -2.041\sym{**} & 6.010\sym{***} & -0.572 & -0.334 & -0.561 \\
+                    & (0.79) & (0.00) & (0.48) & (0.53) & (0.47) \\
+Total Number of Children & -2.055\sym{***} & 0.120\sym{***} & -1.823\sym{***} & -1.908\sym{***} & -1.809\sym{***} \\
+                    & (0.22) & (0.00) & (0.22) & (0.16) & (0.14) \\
+Partner's Age & 0.004 & 0.000 & 0.033 & -0.031 & -0.026 \\
+                    & (0.05) & (.) & (0.05) & (0.04) & (0.02) \\
+Average Birth Gap & -0.054\sym{***} & 0.000 & -0.025\sym{**} & -0.040\sym{***} & -0.044\sym{***} \\
+                    & (0.01) & (.) & (0.01) & (0.01) & (0.01) \\
+Breastfeeding Duration & 0.094\sym{***} & 0.000 & 0.044 & 0.029 & 0.038\sym{*} \\
+                    & (0.03) & (.) & (0.03) & (0.02) & (0.02) \\
+Partner's Migration Rate (log) & -0.472 & 0.000 & -0.259 & 0.048 & -0.021 \\
+                    & (0.46) & (.) & (0.48) & (0.39) & (0.36) \\
+\hline
+Birth Year FE & YES & YES & YES & YES & YES \\
+District FE & YES & YES & YES & YES & YES \\
+R-squared & 0.921 & 1.000 & 0.917 & 0.839 & 0.861 \\
+Observations & 186 & 45 & 218 & 335 & 364 \\
+\hline \hline
+
+\end{longtable}
