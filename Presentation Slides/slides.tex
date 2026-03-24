@@ -1,0 +1,370 @@
+\documentclass{beamer}
+\usepackage{booktabs} 
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{appendixnumberbeamer} 
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.4cm, text centered, draw=black, fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=0.4cm, text centered, text width=5cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=0.4cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+%%% To add citations
+%\usepackage[style=authoryear, backend=bibtex]{biblatex}
+%\addbibresource{bib.bib}
+
+%%% Customize Theme %%%%%%%%%%%%%%%%%%%%%%
+
+\usetheme{CambridgeUS}  % Set the theme
+
+% Optional color theme
+
+\usecolortheme{rose}
+% Add customization (optional)
+
+
+%\usetheme{Madrid}
+%\usecolortheme{crane}
+%\usefonttheme{structurebold}
+%\useinnertheme{rounded}
+%\useoutertheme{smoothbars}
+%\usetheme{Pittsburgh} % You can use other themes too, but this changes many things. I've found Madrid to be the best for this color scheme
+
+%fg = font color
+%bg = background color
+
+% ! WARNING ! : Many colors are linked to multiple attributes, so changing one color can have unexpected changes!
+
+% If you want to tweak the shading of orange and red, tweak the below 2 lines:t
+\definecolor{myRed}{RGB}{4,4,100}
+\definecolor{myOrange}{RGB}{4, 60, 0}
+
+% Bottom right hand color
+\setbeamercolor*{structure}{bg=myRed!20,fg=myRed!90}
+
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg} %?
+\setbeamercolor*{palette secondary}{use=structure,fg=myRed,bg=white}
+    %bottom left of footer & bar between title & top bubbles
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=myRed} 
+
+\setbeamercolor{frametitle}{bg=myRed!85,fg=white} %title of each slide
+
+\setbeamercolor*{titlelike}{parent=palette primary} %?
+%\setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!myRed}
+
+%for miniframe (very top) AND center footer
+\setbeamercolor{section in head/foot}{fg=myOrange, bg=white}
+
+%%% Specific Colors %%%
+\setbeamercolor{item projected}{bg=myOrange}
+\setbeamercolor{enumerate item}{bg=myOrange}
+
+\setbeamercolor{itemize item}{fg=myOrange}
+\setbeamercolor{itemize subitem}{fg=myOrange}
+
+\setbeamercolor{button}{bg=myOrange}
+
+%%% Edits ONLY the TOC slide %%%
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=black}
+
+%%% Block Colors %%%
+% Standard block %
+    \setbeamercolor{block title}{bg=myOrange, fg=white}
+    \setbeamercolor{block body}{bg=myOrange!20}
+
+% Alerted block % If you want to customize it's color
+    %\setbeamercolor{block title alerted}{bg=cyan, fg=white}
+    %\setbeamercolor{block body alerted}{bg=cyan!10}
+
+% Example block % If you want to customize it's color
+    %\setbeamercolor{block title example}{bg=cyan, fg=white}
+    %\setbeamercolor{block body example}{bg=cyan!10}
+%---------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%---------------------------------------------------------
+\usefonttheme{serif} % Typeset using the default sans serif font
+%\usepackage{palatino} %Use the Palatino font for serif text
+%\usepackage[]{FiraSans} % Use the Open Sans font for sans serif text
+\useinnertheme{circles}
+
+%---------------------------------------------------------
+%	SELECT OUTER THEME
+%---------------------------------------------------------
+% Outer themes change the overall layout of slides, such as: header and footer lines, sidebars and slide titles. Uncomment each theme in turn to see what changes it makes to your presentation.
+
+%\useoutertheme{default}
+%
+\useoutertheme{miniframes}
+
+%\useoutertheme{infolines}
+%\useoutertheme{smoothbars}
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%---------------------------------------------------------
+%	PRESENTATION INFORMATION
+%---------------------------------------------------------
+
+\title[]{Shaken to the Core: The Effect of Nepal's 2015 Earthquake on Infant Death}
+%\subtitle{Subtitle}
+\author[]{Ramesh Dulal } 
+
+
+\institute[]{Department of Economics\\ 
+\\
+\includegraphics[width=6cm]{Presentation Slides/Logo.png}}
+%\date[Fall 20XX]
+\date[\today]
+
+\logo{\includegraphics[width=0.5cm]{Presentation Slides/Logo Plain.png}}
+
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	TITLE SLIDE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\titlepage 
+ 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+
+% References sections and subsections, specified with the standard \section and \subsection commands. If you want to display all sections and subsections on one slide, just use \tableofcontents. If you want to just display each section one at a time (in subsequent slides) use \tableofcontents[pausesections].
+
+\begin{frame}
+	\frametitle{Table of Contents} % Slide title, remove this command for no title
+	
+	\tableofcontents % Output the table of contents (all sections on one slide)
+	%\tableofcontents[pausesections] % Output the table of contents (break sections up across separate slides)
+\end{frame}
+
+%---------------------------------------------------------
+%	PRESENTATION BODY SLIDES
+%---------------------------------------------------------
+\section{Introduction}
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Background}
+    \begin{itemize}
+        \item Nepal was hit by a 7.8 magnitude earthquake on $25^{th}$ of April and $12^{th}$ of May in the year 2015.
+        \item 14/75 districts: worst affected and 31/75: affected
+        \item 500,000 houses were destroyed totally and 250,000 were partially damaged.
+        \item About 9,000 deaths and 22,300 casualties
+        \item 55\% of the casualties resulted into women and child mortality
+        \item 446 public health facilities including 5 hospitals were completely destroyed
+        \item 765 health facilities were partially damaged
+        
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Contd...}
+    \begin{itemize}
+    \item Government started providing emergency relied as tarps, food, Household goods, corrugated galvanized sheets or even cash.
+        \item Government provided decided to provide the cash assistance on June 1, 2015
+        \item The cash assistance was 30,000 for funeral service, 15,000 for severely hit houses and 3,000 for partially damaged houses. 
+        \item The government initiated Local Government and Community Program Grant with cash assistance to be provided through local government
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Question}
+    \begin{itemize}
+        \item What were the effects of 2015 Earthquake in Nepal on infant mortality? What were the factors responsible for the infant mortality?  
+    \end{itemize}
+\end{frame}
+%------------------------------------------------
+\section{Data}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Data}
+        \begin{itemize}
+            \item Three rounds of Nepal Demographic Health Survey; 2011, 2016 and 2022
+            \item 37,991 children born during the period 2005 to 2019 as sample.
+            \item 14 districts taken as Earthquake Affected group and 7 districts as Severely Affected group.
+            \begin{center}
+               \includegraphics[width=6cm]{Presentation Slides/earthquake-affected.png} 
+        \end{center}
+        \end{itemize}
+\end{frame}   
+
+%------------------------------------------------
+\begin{frame}[plain]
+
+
+\begin{table}
+    \centering
+    \caption{Summary Statistics}
+    \label{Individual Summary}
+    \scalebox{0.5}{ 
+    \input{Tables/Summary Statistics}
+    }
+\end{table}
+
+
+\end{frame}
+
+%------------------------------------------------
+%\begin{frame}[plain]
+
+%\begin{table}
+ %   \centering
+  %  \caption{}
+   % \label{Individual Summary}
+    % \scalebox{0.5}{  
+    %\input{Tables/summary Statistics2}
+    %}
+%\end{table}
+
+
+%\end{frame}
+%------------------------------------------------
+\begin{frame}[plain]
+\renewcommand{\arraystretch}{1}
+\tiny{
+\begin{table}
+    \centering
+    \caption{ttest of Mean difference (Before Earthquake)}
+    \label{Individual Summary}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/t-test Control Treatment before Earthquake}
+    }
+\end{table}
+}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[plain]
+\renewcommand{\arraystretch}{1}
+\tiny{
+\begin{table}
+    \centering
+    \caption{test of difference}
+    \label{Individual Summary}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/ttest pre and post earthquake}
+    }
+\end{table}
+}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[plain]
+\renewcommand{\arraystretch}{1}
+\tiny{
+\begin{table}
+    \centering
+    \caption{test of difference}
+    \label{Individual Summary}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/ttest treatment and control}
+    }
+\end{table}
+}
+
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Empirical Approach}
+
+\footnotesize    
+
+\begin{equation*}
+Infant \ death_{idt} = \beta_{0} + \beta_{1} \Big(treat_{id} \times post_{t} \Big) + \beta_{2} \ treat_{id} + \beta_{3} \ post_{t} + X\theta  + \zeta_{d} + \delta_{t} + \varepsilon_{it}   
+\end{equation*}
+    
+\begin{equation*}
+      Infant\,death_{idt} = 
+    \begin{cases}
+    1 &  \text{if a child $i$ born in district $d$ and year $t$ who died within 1st year\\ of birth} \\
+    0 &  \text{Otherwise}
+    \end{cases}
+\end{equation*}
+
+\end{frame}
+
+%------------------------------------------------
+%\begin{frame}{Threat to Identification}
+%\begin{center}
+ %              \includegraphics[width=5cm]{Figures/infant_death.png} 
+  %             \includegraphics[width=5cm]{Figures/detrended_infant_death.png}
+   %     \end{center}
+%\end{frame}
+
+%------------------------------------------------
+\section{Results}
+%------------------------------------------------
+\begin{frame}
+\begin{table}
+    \centering
+    \caption{DiD}
+    \label{Difference in Difference}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/DID table}
+    }
+\end{table}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\renewcommand{\arraystretch}{0.8}
+\tiny{
+\begin{table}
+    \centering
+    \caption{Regression Results}
+    \label{Regression}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/Regression Infant_death}
+    }
+\end{table}
+}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\renewcommand{\arraystretch}{0.8}
+\tiny{
+\begin{table}
+    \centering
+    \caption{Regression Results for severely Affected}
+    \label{Regression}
+    \resizebox{\columnwidth}{!}{ 
+    \input{Tables/regression infant_death severe hit}
+    }
+\end{table}
+}
+\end{frame}
+%------------------------------------------------
+%	CLOSING SLIDE
+%---------------------------------------------------------
+% To remove miniframe from top
+%\appendix
+\setbeamertemplate{headline}{}
+\addtobeamertemplate{frametitle}{\vspace*{-\headheight}}{}
+
+\begin{frame}[noframenumbering] %So the end and appendix slides don't contribute to the page count
+%[plain] % The optional argument 'plain' hides the headline and footline
+	%\frametitle{Questions?}
+
+	\begin{center}
+            {\LARGE Thank You.}
+	\end{center}
+\end{frame}
+
+\end{document} 
