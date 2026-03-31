@@ -32,7 +32,7 @@ else {
 * ── All other paths built from roots (same for everyone) ────────────────── *
 global raw_data      "$dropbox/2015 Earthquake and A1B/Data/Raw_Data"
 global modified_data "$dropbox/2015 Earthquake and A1B/Data/Modified_Data"
-global dofiles       "$github/Code"
+global dofiles       "$github/STATA_Codes" 
 global figures       "$github/Paper/Figures"
 global tables        "$github/Paper/Tables New"
 
@@ -78,6 +78,7 @@ display as text " STEP 1a: Birth Gap Data Cleaning"
 display as text "========================================================"
 do "$dofiles/Step1_birth_gap.do"
 
+e
 display as text "========================================================"
 display as text " STEP 1b: Breastfeeding Data Cleaning"
 display as text "========================================================"
