@@ -14,7 +14,7 @@ capture log close
 *        $modified_data) are defined in Master.do. Run via Master.do only.     *
 *------------------------------------------------------------------------------*
 
-* Convenience alias so the rest of this file can use $data unchanged
+
 global data "$modified_data"
 
 
