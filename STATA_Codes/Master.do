@@ -32,7 +32,7 @@ else {
 * ── All other paths built from roots (same for everyone) ────────────────── *
 global raw_data      "$dropbox/2015 Earthquake and A1B/Data/Raw_Data"
 global modified_data "$dropbox/2015 Earthquake and A1B/Data/Modified_Data"
-global dofiles       "$github/Code"
+global dofiles       "$github/STATA_Codes"
 global figures       "$github/Paper/Figures"
 global tables        "$github/Paper/Tables New"
 *------------------------------------------------------------------------------*
@@ -97,7 +97,10 @@ display as text " STEP 2: Variable Definitions - Couple & Women"
 display as text "========================================================"
 do "$dofiles/Step2_variable_define_couple_women.do"
 
-
+display as text "========================================================"
+display as text " STEP 3: Merging the Birth Gap"
+display as text "========================================================"
+do "$dofiles/Step3_birth_gap_merged.do"
 *==============================================================================*
 *   END OF MASTER FILE                                                          *
 *==============================================================================*
