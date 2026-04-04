@@ -54,7 +54,7 @@ cat("Master.R started:", format(Sys.time()), "\n\n")
 cat("========================================================\n")
 cat(" STEP 4: Balance Table (Pre vs Post Earthquake t-tests)\n")
 cat("========================================================\n")
-#source(file.path(r_scripts, "ttest_balance_table.R"))
+source(file.path(r_scripts, "t-test_Balance_Table.R"))
 
 
 # ==============================================================================
